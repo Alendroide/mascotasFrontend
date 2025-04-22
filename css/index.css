@@ -1,0 +1,41 @@
+.mainframe {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bg-login {
+    position: fixed;
+}
+
+.login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 143%;
+}
+
+.login-error{
+    text-align:center;
+    color:white;
+}
+
+.login-input, .login-button {
+    width: 85%;
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: 5px auto;
+}
+
+.login-input {
+    box-sizing: border-box;
+    opacity: 40%;
+}
+
+.login-button {
+    background-color: rgb(44,70,116);
+    color: white;
+    border: 0;
+}

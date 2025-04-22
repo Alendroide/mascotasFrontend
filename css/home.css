@@ -1,0 +1,26 @@
+.mainframe {
+    position: relative;
+}
+
+.navbar {
+    margin: 15px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+.home-title {
+    font-size: 20px;
+    color: white;
+}
+
+.log-off {
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    translate: 42vw 50%;
+}
+.add-btn {
+    display: block;
+    margin: 0 auto;
+}

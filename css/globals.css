@@ -1,0 +1,8 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(44,70,116);
+    font-family: Arial;
+}
