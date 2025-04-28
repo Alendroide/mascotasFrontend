@@ -39,8 +39,8 @@ document.getElementById("data-display").innerHTML = data.map((mascota) => {
                 </div>
                 <div class='pet-options-container'>
                     <img class='pet-option' src='../imgs/btn-show.svg' alt='search' onclick="window.location.href = '/page/pet.html?pet=${mascota.id}'">
-                    <img class='pet-option' src='../imgs/btn-edit.svg' alt='search'>
-                    <img class='pet-option' src='../imgs/btn-delete.svg' alt='search'>
+                    <img class='pet-option' src='../imgs/btn-edit.svg' alt='search' onclick="window.location.href = '/page/edit.html?pet=${mascota.id}'">
+                    <img class='pet-option' src='../imgs/btn-delete.svg' alt='search' onclick="window.location.href = '/page/delete.html?pet=${mascota.id}'">
                 </div>
             </div>
         `
