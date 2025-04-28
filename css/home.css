@@ -82,6 +82,16 @@
     margin: 0 16px 0 auto;
 }
 
+.pet-option {
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.pet-option:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 @media(min-width: 640px) {
     .log-off {
         position: absolute;

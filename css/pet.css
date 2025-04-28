@@ -1,0 +1,90 @@
+.mainframe {
+    position: relative;
+}
+
+.navbar {
+    margin: 15px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+.home-title {
+    font-size: 20px;
+    color: white;
+}
+
+.back-button {
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    translate: -42vw 85%;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.back-button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.log-off {
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    translate: 42vw 50%;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.log-off:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.pet-photo {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.info-section {
+    position: relative;
+    width: 360px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.input-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.input-info {
+    position: absolute;
+    left: 130px;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+@media(min-width: 640px) {
+    .log-off {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        translate: 45vw 50%;
+    }
+    .back-button {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        translate: -45vw 55%;
+    }
+    .pet-photo {
+        width: 10%;
+    }
+}
