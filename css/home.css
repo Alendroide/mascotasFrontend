@@ -19,8 +19,74 @@
     width: 8vw;
     height: 8vw;
     translate: 42vw 50%;
+    transition: all;
+    transition-duration: 200ms;
 }
+
+.log-off:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
 .add-btn {
     display: block;
     margin: 0 auto;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.add-btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.pet-container {
+    box-sizing: border-box;
+    margin: 0 15px;
+    margin-top: 12px;
+    padding: 12px 0;
+    border-radius: 15px;
+    display: flex;
+}
+
+.pet-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-left: 16px;
+}
+
+.pet-name-container {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pet-name {
+    color: rgb(44,70,116);
+    font-weight: 300;
+    margin: 0;
+}
+
+.pet-race {
+    color: rgb(57, 91, 150);
+    font-weight: 200;
+    margin: 0;
+}
+
+.pet-options-container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin: 0 16px 0 auto;
+}
+
+@media(min-width: 640px) {
+    .log-off {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        translate: 45vw 50%;
+    }
 }

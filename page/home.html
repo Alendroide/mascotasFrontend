@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/globals.css"/>
     <link rel="stylesheet" href="../css/home.css"/>
+    <link rel="icon" href="../imgs/photo-lg-1.svg">
+    <script src="../scripts/config.js"></script>
     <script src="../scripts/auth.js" async></script>
+    <script src="../scripts/home.js" type="module" async></script>
     <title>Best Friend | Home</title>
 </head>
 <body>
     <div class="mainframe">
         <div class="navbar">
             <p class="home-title">Administrar mascotas</p>
-            <img onclick="logoff()" class="log-off" src="/imgs/btn-close.svg" alt="">
+            <img onclick="logoffAB()" class="log-off" src="/imgs/btn-close.svg" alt="">
         </div>
         <img class="add-btn" src="../imgs/btn-add.svg" alt="addPet">
+        <div id="data-display">
+
+        </div>
     </div>
 </body>
 </html>

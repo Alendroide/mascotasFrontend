@@ -2,9 +2,9 @@ const token = localStorage.getItem('token');
 if(token) window.location.href = '/page/home.html';
 
 const loginForm = document.getElementById("login-form");
-loginForm.addEventListener('submit',login);
+loginForm.addEventListener('submit',loginAB);
 
-async function login(e){
+async function loginAB(e){
     e.preventDefault();
     try{
         const email = document.getElementById("email").value

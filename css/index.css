@@ -39,3 +39,29 @@
     color: white;
     border: 0;
 }
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+@media(min-width : 640px) {
+    body {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    .mainframe {
+        height: 100vh;
+    }
+    .bg-login {
+        position: absolute;
+        height: 100vh;
+        left: 0;
+    }
+    .login-form {
+        margin-top: 0;
+        margin-left: 420px;
+    }
+    .login-button {
+        box-shadow: 3px 3px 10px black;
+    }
+}
