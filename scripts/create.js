@@ -11,7 +11,8 @@ async function submitForm(){
     const name = document.getElementById("name").value;
     const race_id = document.getElementById("race_id").value;
     const gender_id = document.getElementById("gender_id").value;
-    const photo = document.getElementById("name").files?.[0];
+    const photo = document.getElementById("photo").files?.[0];
+    console.log(photo)
 
     // Checkear errores
     if(!name) document.getElementById("name.error").innerHTML = "Ingrese un nombre"
@@ -26,17 +27,17 @@ async function submitForm(){
     formData.append("gender_id",gender_id);
     formData.append("photo",photo);
 
-    const response = await fetch(`${API_URL}/pets/create`,{
-        body : formData,
-        method : "POST",
-        headers : {
-            "Authorization" : `Bearer ${localStorage.getItem("token")}`
-        }
-    })
+    // const response = await fetch(`${API_URL}/pets/create`,{
+    //     body : formData,
+    //     method : "POST",
+    //     headers : {
+    //         "Authorization" : `Bearer ${localStorage.getItem("token")}`
+    //     }
+    // })
 
-    const json = await response.json();
+    // const json = await response.json();
 
-    if(json.status != 201) console.log(json);
+    // if(json.status != 201) console.log(json);
 }
 
 const razasRes = await fetch(`${API_URL}/races/getAll`,{

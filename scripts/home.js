@@ -10,7 +10,6 @@ async function getPetsAB(){
         });
         if(!response.ok) throw new Error("NO AUTORIZADO")
         const json = await response.json();
-        console.log(json.data);
         return json.data;
     }
     catch(error){
