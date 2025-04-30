@@ -58,6 +58,7 @@
     transform: translateX(-50%);
     z-index: 10;
     height: 100%;
+    width: 100%;
     object-fit: cover;
     pointer-events: none;
 }
