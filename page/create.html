@@ -20,8 +20,8 @@
         </div>
         <form>
             <div class="file-div">
-                <img src="/imgs/photo-lg-0.svg" alt="inputIconPhoto" name="photo" class="input-file-img" />
-                <input type="file" id="photo" class="input-file" />
+                <img src="/imgs/photo-lg-0.svg" id="photo-preview" alt="inputIconPhoto" name="photo" class="input-file-img" />
+                <input onchange="displayPreview()" type="file" id="photo" class="input-file" />
             </div>
             <input class="input-text" id="name" name="name" placeholder="Nombre" />
             <error id="name.error"></error>

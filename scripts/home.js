@@ -31,7 +31,9 @@ document.getElementById("data-display").innerHTML = data.map((mascota) => {
     return (
         `
             <div class='pet-container' style='background-color:${count % 2 == 0 ? 'rgba(255,255,255,0.5)' : 'rgba(255,255,255,0.7)' };'>
-                <img class='pet-photo' src='${API_URL}/public/${mascota.photo}' alt='pet-photo'>
+                <div class='pet-photo-div'>
+                    <img class='pet-photo' src='${API_URL}/public/${mascota.photo}' alt='pet-photo'>
+                </div>
                 <div class='pet-name-container'>
                     <p class='pet-name'>${mascota.name}</p>
                     <p class='pet-race'>${(mascota.race.name).charAt(0).toUpperCase()+(mascota.race.name).slice(1)}</p>

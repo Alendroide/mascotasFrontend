@@ -23,7 +23,9 @@ console.log(mascota)
 
 document.getElementById("info-form").innerHTML = `
     <div style='display:flex; align-items:center; flex-direction:column;'>
-        <img class='pet-photo' src='${API_URL}/public/${mascota.photo}' />
+        <div class='pet-photo-div'>
+            <img class='pet-photo' src='${API_URL}/public/${mascota.photo}' />
+        </div>
         <div style='margin-top:64px'>
             <div class='info-section'>
                 <img class='input-img' src='../imgs/info-name.svg' />

@@ -27,17 +27,18 @@ async function submitForm(){
     formData.append("gender_id",gender_id);
     formData.append("photo",photo);
 
-    // const response = await fetch(`${API_URL}/pets/create`,{
-    //     body : formData,
-    //     method : "POST",
-    //     headers : {
-    //         "Authorization" : `Bearer ${localStorage.getItem("token")}`
-    //     }
-    // })
+    const response = await fetch(`${API_URL}/pets/create`,{
+        body : formData,
+        method : "POST",
+        headers : {
+            "Authorization" : `Bearer ${localStorage.getItem("token")}`
+        }
+    })
 
-    // const json = await response.json();
+    const json = await response.json();
 
-    // if(json.status != 201) console.log(json);
+    if(json.status != 201) console.log(json);
+    else window.location.href = '/page/home.html';
 }
 
 const razasRes = await fetch(`${API_URL}/races/getAll`,{
@@ -71,3 +72,14 @@ const genders = await gendersJson.data;
 document.getElementById("gender_id").innerHTML += genders.map((gender) => (
     `<option value="${gender.id}">${gender.name.charAt(0).toUpperCase()+gender.name.slice(1)}</option>`
 ))
+
+window.displayPreview = displayPreview
+
+function displayPreview(){
+    const file = document.getElementById("photo").files?.[0];
+    const photoPreview = document.getElementById("photo-preview");
+    if(file) {
+        const blobUrl = URL.createObjectURL(file);
+        photoPreview.src = blobUrl;
+    }
+}
