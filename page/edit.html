@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/globals.css"/>
+        <link rel="stylesheet" href="../css/edit.css"/>
+        <link rel="icon" href="../imgs/photo-lg-1.svg">
+        <script src="../scripts/config.js"></script>
+        <script src="../scripts/auth.js" async></script>
+        <script src="../scripts/edit.js" type="module" async></script>
+        <title>Best Friend | Create</title>
+    </head>
+<body>
+    <div class="mainframe">
+        <div class="navbar">
+            <img onclick="window.location.href = '/page/home.html'" class="back-button" src="/imgs/btn-back.svg" alt="">
+            <p class="home-title">Adicionar Mascota</p>
+            <img onclick="logoffAB()" class="log-off" src="/imgs/btn-close.svg" alt="">
+        </div>
+        <form>
+            <div class="file-div">
+                <img src="/imgs/photo-lg-0.svg" id="photo-preview" alt="inputIconPhoto" name="photo" class="input-file-img" />
+                <input onchange="displayPreview()" type="file" id="photo" class="input-file" />
+            </div>
+            <input class="input-text" id="name" name="name" placeholder="Nombre" />
+            <error id="name.error"></error>
+            <select class="input-text" id="race_id" name="race_id">
+                <option value="">Seleccione Raza...</option>
+            </select>
+            <error id="race_id.error"></error>
+            <select class="input-text" id="gender_id" name="gender_id">
+                <option value="">Seleccione Género...</option>
+            </select>
+            <error id="gender_id.error"></error>
+            <img src="/imgs/btn-save.svg" alt="Create Button" class="create-button" onclick="submitForm()" />
+        </form>
+    </div>
+</body>
+</html>
