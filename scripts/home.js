@@ -41,9 +41,22 @@ document.getElementById("data-display").innerHTML = data.map((mascota) => {
                 <div class='pet-options-container'>
                     <img class='pet-option' src='../imgs/btn-show.svg' alt='search' onclick="window.location.href = '/page/pet.html?pet=${mascota.id}'">
                     <img class='pet-option' src='../imgs/btn-edit.svg' alt='search' onclick="window.location.href = '/page/edit.html?pet=${mascota.id}'">
-                    <img class='pet-option' src='../imgs/btn-delete.svg' alt='search' onclick="window.location.href = '/page/delete.html?pet=${mascota.id}'">
+                    <img class='pet-option' src='../imgs/btn-delete.svg' alt='search' onclick="deletePet(${mascota.id})">
                 </div>
             </div>
         `
     )
 })
+
+window.deletePet = deletePet
+
+async function deletePet(id){
+    const response = await fetch(`${API_URL}/pets/delete/${id}`,{
+        method : "DELETE",
+        headers : {
+            "Authorization" : `Bearer ${localStorage.getItem("token")}`
+        }
+    });
+    if(!response.ok) console.log("Error borrando la mascota");
+    else window.location.reload();
+}
