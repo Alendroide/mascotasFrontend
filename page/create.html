@@ -18,11 +18,22 @@
             <p class="home-title">Adicionar Mascota</p>
             <img onclick="logoffAB()" class="log-off" src="/imgs/btn-close.svg" alt="">
         </div>
-        <form id="create-form">
-            <div class="input-div">
-                <img src="/imgs/photo-lg-0.svg" alt="inputIconPhoto" class="input-file-img" />
+        <form>
+            <div class="file-div">
+                <img src="/imgs/photo-lg-0.svg" alt="inputIconPhoto" id="photo" name="photo" class="input-file-img" />
                 <input type="file" class="input-file" />
             </div>
+            <input class="input-text" id="name" name="name" placeholder="Nombre" />
+            <error id="name.error"></error>
+            <select class="input-text" id="race_id" name="race_id">
+                <option value="">Seleccione Raza...</option>
+            </select>
+            <error id="race_id.error"></error>
+            <select class="input-text" id="gender_id" name="gender_id">
+                <option value="">Seleccione Género...</option>
+            </select>
+            <error id="gender_id.error"></error>
+            <img src="/imgs/btn-save.svg" alt="Create Button" class="create-button" onclick="submitForm()" />
         </form>
     </div>
 </body>

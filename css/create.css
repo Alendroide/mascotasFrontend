@@ -42,9 +42,10 @@
     cursor: pointer;
 }
 
-.input-div {
+.file-div {
     height: 33vw;
     position: relative;
+    margin-bottom: 60px;
 }
 
 .input-file-img {
@@ -70,6 +71,34 @@
     opacity: 0;
 }
 
+.input-text {
+    width: 360px;
+    height: 50px;
+    background-color: white;
+    display: block;
+    margin: 18px auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 100px;
+    opacity: .7;
+}
+
+select {
+    color: rgba(0,0,0,.7);
+}
+
+.create-button {
+    margin: 0 auto;
+    display: block;
+}
+
+error {
+    color: rgb(199, 0, 0);
+    text-align: center;
+    display: block;
+}
+
 @media(min-width: 640px) {
     .log-off {
         position: absolute;
@@ -83,7 +112,7 @@
         height: 32px;
         translate: -45vw 55%;
     }
-    .input-div {
+    .file-div {
         height: 10vw;
     }
     .input-file {
