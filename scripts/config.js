@@ -1,1 +1,1 @@
-const API_URL = 'http://192.168.50.201:3000'
+const API_URL = 'http://192.168.0.102:3000'

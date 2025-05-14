@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/report.css" />
+    <link rel="icon" href="../imgs/photo-lg-1.svg" />
+    <script src="../scripts/config.js"></script>
+    <script src="../scripts/auth.js" async></script>
+    <script src="../scripts/report.js" async type="module"></script>
+    <title>Best Friend | Report</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="home-title">Reporte de mascotas</p>
+      <img
+        onclick="logoffAB()"
+        class="log-off"
+        src="/imgs/btn-close.svg"
+        alt=""
+      />
+    </div>
+    <div style="width: 90%;background-color: white; min-height: 100px; margin: 10px auto;border-radius: 30px;">
+        <p style="text-align: center; font-weight: bold; padding: 20px;" id="pet-count">Número de mascotas: </p>
+        <div style="display: flex;align-items: center;width: 80%; margin: 0 auto;">
+            <span id="not-adopted-percentage-number">
+                0%
+            </span>
+            <div style="display:flex;width: 80%;margin: 0 auto; background-color: rgb(241, 241, 241);height: 50px;border-radius: 30px;" id="graph">
+                <div id="not-adopted-percentage" class="red-graph">
+                    No adoptados
+                </div>
+                <div id="adopted-percentage" class="blue-graph">
+                    Adoptados
+                </div>
+            </div>
+            <span id="adopted-percentage-number">
+                0%
+            </span>
+        </div>
+        <div id="report">
+
+        </div>
+    </div>
+    <span style="display: block;height: 30px;"></span>
+  </body>
+</html>
