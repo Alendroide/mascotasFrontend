@@ -46,3 +46,8 @@ document.getElementById("info-form").innerHTML = `
         </div>
     </div>
 `
+const map = L.map('map').setView([mascota.latitude,mascota.longitude],18);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+}).addTo(map);
+L.marker([mascota.latitude,mascota.longitude]).addTo(map);
