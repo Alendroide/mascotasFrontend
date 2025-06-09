@@ -1,4 +1,9 @@
 
+const map = L.map('map').setView([31.830157, -17.696900], 2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+}).addTo(map);
+
 document.getElementById("data-display").innerHTML = '<h2 style="color:white;text-align:center">Cargando...</h2>'
 
 async function getPetsAB(){
@@ -25,7 +30,16 @@ async function getPetsAB(){
 const data = await getPetsAB();
 let count = 0;
 document.getElementById("data-display").innerHTML = data.map((mascota) => {
-
+    L.marker([mascota.latitude,mascota.longitude]).bindTooltip(`
+        <div style='display: flex;flex-direction: column; width: 50px; justify-content:center; align-items: center'>
+            <img class='pet-photo' src='${API_URL}/public/${mascota.photo}' alt='pet-photo'>
+            ${mascota.name}
+        </div>
+        `, {
+        permanent: false,
+        direction: 'top',
+        opacity: 0.9,
+    }).addTo(map);
     count += 1;
 
     return (
